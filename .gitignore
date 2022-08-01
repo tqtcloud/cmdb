@@ -19,3 +19,4 @@ etc/cmdb.env
 etc/unit_test.env
 etc/ssl
 cmdb
+.idea/
