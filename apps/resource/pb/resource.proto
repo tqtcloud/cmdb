@@ -123,7 +123,11 @@ enum Vendor {
 enum Type {
   HOST = 0;
   RDS = 1;
-  // ... 其他的资源
+  REDIS = 2;
+  BUCKET = 3;
+  DISK = 4;
+  LB = 5;
+  DOMAIN = 6;
   BILL = 99;
 }
 

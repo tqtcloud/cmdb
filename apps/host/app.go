@@ -125,9 +125,10 @@ func NewHostSet() *HostSet {
 	}
 }
 
-func (s *HostSet) Add(item any) {
-	s.Items = append(s.Items, item.(*Host))
-	return
+func (s *HostSet) Add(items ...any) {
+	for i := range items {
+		s.Items = append(s.Items, items[i].(*Host))
+	}
 }
 
 func (s *HostSet) Length() int64 {
@@ -188,6 +189,13 @@ type Set interface {
 	Add(any)
 	// 当前的集合里面有多个元素
 	Length() int64
+}
+
+func (s *HostSet) ToAny() (items []any) {
+	for i := range s.Items {
+		items = append(items, s.Items[i])
+	}
+	return
 }
 
 type PagerV2 interface {

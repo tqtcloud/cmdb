@@ -30,6 +30,18 @@ func (r *SearchRequest) HasTag() bool {
 	return len(r.Tags) > 0
 }
 
+type AccountGetter struct {
+	accountId string
+}
+
+func (ag *AccountGetter) WithAccountId(id string) {
+	ag.accountId = id
+}
+
+func (ag *AccountGetter) GetAccountId() string {
+	return ag.accountId
+}
+
 // 多个值比较的关系说明:
 //    app=~app1,app2  你不能说 app1和app2是 AND关系, 一定是OR关系    是一种白名单策略(包含策略)
 //    app!~app3,app4  tag_key=app tag_value NOT LIKE (app3,app4), 是一种黑名单策略(排除策略)

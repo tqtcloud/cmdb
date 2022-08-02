@@ -1,0 +1,101 @@
+syntax = "proto3";
+
+package course.cmdb.disk;
+option go_package="github/tqtcloud/cmdb/apps/disk";
+
+import "apps/resource/pb/resource.proto";
+import "github.com/infraboard/mcube/pb/page/page.proto";
+
+service Service {
+    rpc SyncDisk(Disk) returns(Disk) {}
+    rpc QueryDisk(QueryDiskRequest) returns(DiskSet) {}
+}
+
+message Disk {
+    course.cmdb.resource.Base base = 1;
+    course.cmdb.resource.Information information = 2;
+    Describe describe = 3;
+}
+
+message Describe {
+    // 类型 (系统盘, 数据盘) 阿里: system：系统盘; data：数据盘
+    // @gotags: json:"type"
+    string type = 1;
+    // 关联的实例
+    // @gotags: json:"instance_id"
+    string instance_id = 2;
+    // 容量大小
+    // @gotags: json:"size"
+    uint64 size = 3;
+    // IOPS
+    // @gotags: json:"iops"
+    int32 iops = 11;
+    // 卸载时间
+    // @gotags: json:"detached_time"
+    int64 detached_time = 4;
+    // 挂载时间
+    // @gotags: json:"attached_time"
+    int64 attached_time = 5;
+    // 是否为弹性云盘
+    // @gotags: json:"portable"
+    bool portable = 6;
+    // 比如: /dev/xvdc
+    // @gotags: json:"device"
+    string device = 7;
+    // 是否加密
+    // @gotags: json:"encrypted"
+    bool encrypted = 8;
+    // 自动快照
+    // @gotags: json:"enable_auto_snapshot"
+    bool enable_auto_snapshot = 9;
+    // 随实例销毁
+    // @gotags: json:"delete_with_instance"
+    bool delete_with_instance = 10;
+    // 是否是共享盘
+    // @gotags: json:"multi_attach"
+    bool multi_attach = 12;
+}
+
+message DiskSet {
+    // 总数量
+    // @gotags: json:"total"
+    int64 total = 1;
+    // 列表项
+    // @gotags: json:"items"
+    repeated Disk items = 2;
+}
+
+message QueryDiskRequest {
+    // 分页参数
+    // @gotags: json:"page"
+    infraboard.mcube.page.PageRequest page = 1;
+}
+
+enum STATUS {
+    // 未知状态
+    UNKNOW = 0;
+
+    // 表示创建中
+    PENDING = 5;
+    // 挂载中
+    ATTACHING = 6;
+   // 未挂载
+    UNATTACHED = 7;
+
+    // 已挂载
+    ATTACHED = 11;
+
+    // 解挂中
+    DETACHING = 30;
+    // 回滚中
+    ROLLBACKING = 31;
+    // 扩容中
+    EXPANDING = 32;
+    // 实例克隆中
+    DUMPING = 34;
+
+    // 表示停止待销毁
+    RECYCLE = 80;
+    // 已归档
+    ARCHIVED = 90;
+}
