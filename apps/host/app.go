@@ -3,16 +3,17 @@ package host
 import (
 	"context"
 	"fmt"
+	"github/tqtcloud/cmdb/apps/resource"
+	"github/tqtcloud/cmdb/utils"
+	"net/http"
+	"strings"
+	"time"
+
 	"github.com/go-playground/validator/v10"
 	"github.com/infraboard/mcube/flowcontrol/tokenbucket"
 	"github.com/infraboard/mcube/http/request"
 	pb_request "github.com/infraboard/mcube/pb/request"
-	"github/tqtcloud/cmdb/apps/resource"
-	"github/tqtcloud/cmdb/utils"
 	"google.golang.org/protobuf/proto"
-	"net/http"
-	"strings"
-	"time"
 )
 
 const (
@@ -186,7 +187,7 @@ type Pagger interface {
 
 type Set interface {
 	// 往Set里面添加元素, 任何类型都可以
-	Add(any)
+	Add(...any)
 	// 当前的集合里面有多个元素
 	Length() int64
 }

@@ -30,6 +30,9 @@ require (
 	github.com/rs/xid v1.4.0
 	github.com/spf13/cobra v1.5.0
 	github.com/stretchr/testify v1.8.0
+	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.464
+	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.464
+	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sts v1.0.464
 	google.golang.org/grpc v1.48.0
 	google.golang.org/protobuf v1.27.1
 )
