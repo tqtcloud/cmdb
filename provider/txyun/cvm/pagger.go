@@ -81,7 +81,7 @@ func (p *pagger) Scan(ctx context.Context, set *host.HostSet) error {
 
 	// 把查询出来的数据赋值给set
 	for i := range hs.Items {
-		set.Add(set.Items[i])
+		set.Add(hs.Items[i])
 	}
 
 	// 可以根据当前一页是满页来决定是否有下一页
