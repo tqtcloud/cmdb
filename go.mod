@@ -3,6 +3,7 @@ module github/tqtcloud/cmdb
 go 1.18
 
 require (
+	gitee.com/go-course/keyauth-g7 v0.0.8
 	github.com/BurntSushi/toml v1.2.0
 	github.com/alibabacloud-go/alidns-20150109/v2 v2.0.1
 	github.com/alibabacloud-go/bssopenapi-20171214/v2 v2.0.6
@@ -74,7 +75,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tjfoc/gmsm v1.3.2 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
-	go.mongodb.org/mongo-driver v1.8.3 // indirect
+	go.mongodb.org/mongo-driver v1.9.1 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.20.0 // indirect
