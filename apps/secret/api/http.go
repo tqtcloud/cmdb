@@ -46,13 +46,13 @@ func (h *handler) Registry(ws *restful.WebService) {
 		Metadata(label.Resource, h.Name()).
 		Metadata(label.Action, label.Create.Value()).
 		// 是否开启认证
-		Metadata(label.Auth, label.Enable).
+		//Metadata(label.Auth, label.Enable).
 		// 是否开启鉴权
-		Metadata(label.Permission, label.Enable).
+		//Metadata(label.Permission, label.Enable).
 		// 开启行为审计
-		Metadata(label.Audit, label.Enable).
+		//Metadata(label.Audit, label.Enable).
 		// 基于用户属性的权限装饰, 未实现
-		Metadata(label.Allow, "admin").
+		//Metadata(label.Allow, "admin").
 		Reads(secret.CreateSecretRequest{}).
 		Writes(response.NewData(secret.Secret{})))
 
@@ -60,10 +60,10 @@ func (h *handler) Registry(ws *restful.WebService) {
 		Doc("get all secret").
 		Metadata(restfulspec.KeyOpenAPITags, tags).
 		Metadata(label.Resource, h.Name()).
-		Metadata(label.Action, label.List.Value()).
-		Metadata(label.Auth, label.Enable).
-		Metadata(label.Permission, label.Enable).
-		Metadata(label.Audit, label.Enable).
+		//Metadata(label.Action, label.List.Value()).
+		//Metadata(label.Auth, label.Enable).
+		//Metadata(label.Permission, label.Enable).
+		//Metadata(label.Audit, label.Enable).
 		Reads(secret.QuerySecretRequest{}).
 		Writes(response.NewData(secret.SecretSet{})).
 		Returns(200, "OK", secret.SecretSet{}))

@@ -140,7 +140,7 @@ func (s *CreateSecretRequest) DecryptAPISecret(key string) error {
 	return nil
 }
 
-// 敏感数据脱敏
+// Desense 敏感数据脱敏
 func (s *CreateSecretRequest) Desense() {
 	if s.ApiSecret != "" {
 		s.ApiSecret = "******"
