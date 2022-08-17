@@ -41,6 +41,7 @@ func (h *handler) Registry(ws *restful.WebService) {
 		Doc("create a host").
 		Metadata(restfulspec.KeyOpenAPITags, tags).
 		Metadata(label.Resource, h.Name()).
+		Metadata(label.Auth, label.Enable).
 		Metadata(label.Action, label.Create.Value()).
 		Reads(host.Host{}).
 		Writes(response.NewData(host.Host{})))

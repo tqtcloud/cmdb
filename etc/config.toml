@@ -4,14 +4,11 @@ key  = "this is your app key"
 
 [app.http]
 host = "127.0.0.1"
-port = "8050"
+port = "8060"
 
 [app.grpc]
 host = "127.0.0.1"
-port = "18050"
-
-
-
+port = "18060"
 
 [mysql]
 host = "192.168.0.101"
@@ -20,7 +17,10 @@ database = "test"
 username = "root"
 password = "123456"
 
-
+[mcenter]
+address = "127.0.0.1:18010"
+client_id = "Y3sdfBoZq1PNeSagtQGJtm4B"
+client_secret = "eSVjI95tLQMPqROPgZp31s1v6y1wrKMr"
 
 [log]
 level = "debug"

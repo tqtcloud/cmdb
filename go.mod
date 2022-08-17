@@ -3,7 +3,6 @@ module github/tqtcloud/cmdb
 go 1.18
 
 require (
-	gitee.com/go-course/keyauth-g7 v0.0.8
 	github.com/BurntSushi/toml v1.2.0
 	github.com/alibabacloud-go/alidns-20150109/v2 v2.0.1
 	github.com/alibabacloud-go/bssopenapi-20171214/v2 v2.0.6
@@ -26,7 +25,8 @@ require (
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/imdario/mergo v0.3.13
-	github.com/infraboard/keyauth v0.8.1
+	github.com/infraboard/keyauth v0.7.9
+	github.com/infraboard/mcenter v0.0.5
 	github.com/infraboard/mcube v1.9.0
 	github.com/rs/xid v1.4.0
 	github.com/spf13/cobra v1.5.0
@@ -34,8 +34,9 @@ require (
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.464
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.464
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sts v1.0.464
+	github.com/tqtcloud/keyauth v0.0.3
 	google.golang.org/grpc v1.48.0
-	google.golang.org/protobuf v1.27.1
+	google.golang.org/protobuf v1.28.1
 )
 
 require (
@@ -57,7 +58,6 @@ require (
 	github.com/go-openapi/swag v0.19.15 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
-	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af // indirect
@@ -75,11 +75,11 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tjfoc/gmsm v1.3.2 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
-	go.mongodb.org/mongo-driver v1.9.1 // indirect
+	go.mongodb.org/mongo-driver v1.10.1 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.20.0 // indirect
-	golang.org/x/crypto v0.0.0-20220131195533-30dcbda58838 // indirect
+	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
 	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
 	golang.org/x/sys v0.0.0-20220204135822-1c1b9b1eba6a // indirect
 	golang.org/x/text v0.3.7 // indirect

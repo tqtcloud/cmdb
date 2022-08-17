@@ -13,6 +13,9 @@ import (
 
 	"github.com/infraboard/mcube/app"
 
+	keyauth_rpc "github.com/tqtcloud/keyauth/client/rpc"
+	keyauth_auth "github.com/tqtcloud/keyauth/client/rpc/auth"
+
 	"github/tqtcloud/cmdb/conf"
 	"github/tqtcloud/cmdb/swagger"
 )
@@ -33,6 +36,16 @@ func NewHTTPService() *HTTPService {
 		CookiesAllowed: false,
 		Container:      r}
 	r.Filter(cors.Filter)
+
+	// 加载认证中间件, 需要Keyauth的SDK
+	keyauthClient, err := keyauth_rpc.NewClient(conf.C().Mcenter)
+	if err != nil {
+		panic(err)
+	}
+	auther := keyauth_auth.NewKeyauthAuther(keyauthClient, "cmdb")
+	fmt.Println(auther)
+	// 加载 http中间件
+	r.Filter(auther.RestfulAuthHandlerFunc)
 
 	server := &http.Server{
 		ReadHeaderTimeout: 60 * time.Second,

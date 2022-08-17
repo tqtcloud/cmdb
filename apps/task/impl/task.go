@@ -7,12 +7,13 @@ import (
 	"github/tqtcloud/cmdb/apps/secret"
 	"github/tqtcloud/cmdb/apps/task"
 	"github/tqtcloud/cmdb/conf"
+	"time"
+
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"time"
 )
 
-// 创建任务的业务逻辑
+//CreateTask 创建任务的业务逻辑
 func (i *impl) CreateTask(ctx context.Context, req *task.CreateTaskRequst) (*task.Task, error) {
 	// 创建Task实例
 	t, err := task.CreateTask(req)
