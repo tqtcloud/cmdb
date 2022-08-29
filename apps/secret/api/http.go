@@ -52,7 +52,7 @@ func (h *handler) Registry(ws *restful.WebService) {
 		// 开启行为审计
 		//Metadata(label.Audit, label.Enable).
 		// 基于用户属性的权限装饰, 未实现
-		//Metadata(label.Allow, "admin").
+		Metadata(label.Allow, "admin").
 		Reads(secret.CreateSecretRequest{}).
 		Writes(response.NewData(secret.Secret{})))
 

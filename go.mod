@@ -34,7 +34,7 @@ require (
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.464
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.464
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sts v1.0.464
-	github.com/tqtcloud/keyauth v0.0.3
+	github.com/tqtcloud/keyauth v0.0.5
 	google.golang.org/grpc v1.48.0
 	google.golang.org/protobuf v1.28.1
 )

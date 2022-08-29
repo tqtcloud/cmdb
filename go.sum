@@ -548,8 +548,8 @@ github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sts v1.0.464/go.mod h1:
 github.com/tidwall/pretty v1.0.0/go.mod h1:XNkn88O1ChpSDQmQeStsy+sBenx6DDtFZJxhVysOjyk=
 github.com/tjfoc/gmsm v1.3.2 h1:7JVkAn5bvUJ7HtU08iW6UiD+UTmJTIToHCfeFzkcCxM=
 github.com/tjfoc/gmsm v1.3.2/go.mod h1:HaUcFuY0auTiaHB9MHFGCPx5IaLhTUd2atbCFBQXn9w=
-github.com/tqtcloud/keyauth v0.0.3 h1:rPHvXgbn2Rnt/j0yKhlxkA2M4VgKFmCLgKoufEXLwlA=
-github.com/tqtcloud/keyauth v0.0.3/go.mod h1:/38ScL+YkyLCmVyfe1ynIs+xswpL53tgEZsxeCD1LRQ=
+github.com/tqtcloud/keyauth v0.0.5 h1:TmtnFEgC94dkRLQZktW05yF6739zEqCMXq6uEiaRXbA=
+github.com/tqtcloud/keyauth v0.0.5/go.mod h1:PzGH6c6IPg7boWx5bUVSfUzKys/ynpzUjuCVK7IB+Vg=
 github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926/go.mod h1:9ESjWnEqriFuLhtthL60Sar/7RFoluCcXsuvEwTV5KM=
 github.com/ugorji/go v1.1.7/go.mod h1:kZn38zHttfInRq0xu/PH0az30d+z6vm202qpg1oXVMw=
 github.com/ugorji/go v1.2.6/go.mod h1:anCg0y61KIhDlPZmnH+so+RQbysYVyDko0IMgJv0Nn0=
